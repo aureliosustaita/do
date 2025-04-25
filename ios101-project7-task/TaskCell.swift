@@ -6,10 +6,7 @@ import UIKit
 
 // A cell to display a task
 class TaskCell: UITableViewCell {
-
-    @IBOutlet weak var completeButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var noteLabel: UILabel!
 
     // The closure called, passing in the associated task, when the "Complete" button is tapped.
     var onCompleteButtonTapped: ((Task) -> Void)?
@@ -51,17 +48,8 @@ class TaskCell: UITableViewCell {
     // 4. Set the "Completed" button's selected state based on the task's completed state.
     // 5. Set the button's tint color based on the task's completed state. (blue if complete, system gray if not)
     private func update(with task: Task) {
-        // 1.
         titleLabel.text = task.title
-        noteLabel.text = task.note
-        // 2.
-        noteLabel.isHidden = task.note == "" || task.note == nil
-        // 3.
         titleLabel.textColor = task.isComplete ? .secondaryLabel : .label
-        // 4.
-        completeButton.isSelected = task.isComplete
-        // 5.
-        completeButton.tintColor = task.isComplete ? .systemBlue : .tertiaryLabel
     }
 
     // This overrides the table view cell's default selected and highlighted behavior to do nothing, otherwise, the row would darken when tapped
@@ -69,3 +57,78 @@ class TaskCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) { }
     override func setHighlighted(_ highlighted: Bool, animated: Bool) { }
 }
+
+//import UIKit
+//
+//class TaskCell: UITableViewCell, UITextViewDelegate {
+//
+//    @IBOutlet weak var completeButton: UIButton!
+//    @IBOutlet weak var titleLabel: UILabel!
+//    @IBOutlet weak var noteLabel: UILabel!
+//
+//    var task: Task!
+//    var onCompleteButtonTapped: ((Task) -> Void)?
+//    var onTaskTitleUpdated: ((Task) -> Void)?
+//
+//    private var titleTextView: UITextView!
+//
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//
+//        // Setup double-tap gesture
+//        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(enableTitleEditing))
+//        doubleTap.numberOfTapsRequired = 2
+//        titleLabel.isUserInteractionEnabled = true
+//        titleLabel.addGestureRecognizer(doubleTap)
+//
+//        // Setup titleTextView
+//        titleTextView = UITextView(frame: titleLabel.frame)
+//        titleTextView.font = titleLabel.font
+//        titleTextView.isHidden = true
+//        titleTextView.delegate = self
+//        titleTextView.backgroundColor = .clear
+//        titleTextView.isScrollEnabled = false
+//        contentView.addSubview(titleTextView)
+//    }
+//
+//    @objc func enableTitleEditing() {
+//        titleTextView.text = titleLabel.text
+//        titleLabel.isHidden = true
+//        titleTextView.isHidden = false
+//        titleTextView.becomeFirstResponder()
+//    }
+//
+//    func textViewDidEndEditing(_ textView: UITextView) {
+//        guard let newText = textView.text else { return }
+//        titleLabel.text = newText
+//        task.title = newText // Update task model
+//        onTaskTitleUpdated?(task) // Notify parent view controller if needed
+//        titleLabel.isHidden = false
+//        titleTextView.isHidden = true
+//    }
+//
+//    func configure(with task: Task, onCompleteButtonTapped: ((Task) -> Void)?, onTaskTitleUpdated: ((Task) -> Void)?) {
+//        self.task = task
+//        self.onCompleteButtonTapped = onCompleteButtonTapped
+//        self.onTaskTitleUpdated = onTaskTitleUpdated
+//        update(with: task)
+//    }
+//
+//    private func update(with task: Task) {
+//        titleLabel.text = task.title
+//        noteLabel.text = task.note
+//        noteLabel.isHidden = task.note == "" || task.note == nil
+//        titleLabel.textColor = task.isComplete ? .secondaryLabel : .label
+//        completeButton.isSelected = task.isComplete
+//        completeButton.tintColor = task.isComplete ? .systemBlue : .tertiaryLabel
+//    }
+//
+//    @IBAction func didTapCompleteButton(_ sender: UIButton) {
+//        task.isComplete.toggle()
+//        update(with: task)
+//        onCompleteButtonTapped?(task)
+//    }
+//
+//    override func setSelected(_ selected: Bool, animated: Bool) { }
+//    override func setHighlighted(_ highlighted: Bool, animated: Bool) { }
+//}
