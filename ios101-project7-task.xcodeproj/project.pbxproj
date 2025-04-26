@@ -15,6 +15,7 @@
 		CB602BA52924735C006C6727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB602BA32924735C006C6727 /* LaunchScreen.storyboard */; };
 		CB602BAD292476F4006C6727 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB602BAC292476F4006C6727 /* TaskCell.swift */; };
 		CB9D9ED1292483BC00F8F51B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9D9ED0292483BC00F8F51B /* Task.swift */; };
+		E51940912DBCA1DC002FC856 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51940902DBCA1DB002FC856 /* TaskDetailViewController.swift */; };
 		ED7EC37629F0EFD000146345 /* TaskComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7EC37529F0EFD000146345 /* TaskComposeViewController.swift */; };
 		EDE386D029F7892D007E714F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE386CF29F7892D007E714F /* CalendarViewController.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		CB602BA62924735C006C6727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB602BAC292476F4006C6727 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		CB9D9ED0292483BC00F8F51B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		E51940902DBCA1DB002FC856 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		ED7EC37529F0EFD000146345 /* TaskComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskComposeViewController.swift; path = "ios101-project7-task/TaskComposeViewController.swift"; sourceTree = SOURCE_ROOT; };
 		EDE386CF29F7892D007E714F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 				CB602BAC292476F4006C6727 /* TaskCell.swift */,
 				ED7EC37529F0EFD000146345 /* TaskComposeViewController.swift */,
 				CB9D9ED0292483BC00F8F51B /* Task.swift */,
+				E51940902DBCA1DB002FC856 /* TaskDetailViewController.swift */,
 				EDE386CF29F7892D007E714F /* CalendarViewController.swift */,
 				CB602B9E29247359006C6727 /* Main.storyboard */,
 				CB602BA32924735C006C6727 /* LaunchScreen.storyboard */,
@@ -156,6 +159,7 @@
 				CB602B9D29247359006C6727 /* TaskListViewController.swift in Sources */,
 				CB602B9929247359006C6727 /* AppDelegate.swift in Sources */,
 				CB602B9B29247359006C6727 /* SceneDelegate.swift in Sources */,
+				E51940912DBCA1DC002FC856 /* TaskDetailViewController.swift in Sources */,
 				CB9D9ED1292483BC00F8F51B /* Task.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
