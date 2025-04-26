@@ -74,8 +74,14 @@ A task manager that logs completed tasks into a Motivation Bank. This encourages
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<div>
+    <a href="https://www.loom.com/share/8a18ea637ae9497b8bde42d74fc83336">
+    </a>
+    <a href="https://www.loom.com/share/8a18ea637ae9497b8bde42d74fc83336">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/8a18ea637ae9497b8bde42d74fc83336-94f0628cddd94475-full-play.gif">
+    </a>
+  </div>
+ 
 
 <div>
     <a href="https://www.loom.com/share/eeeede5f130f47269eba6fb441fb4b7a">
